@@ -61,6 +61,10 @@ public class ShipController : MonoBehaviour
      */
     void Update()
     {
+        if(Input.GetKey(KeyCode.O))
+        {
+            StartCoroutine(Reset());
+        }
         if (canMove)
         {
             if (Input.GetKey(KeyCode.UpArrow))
@@ -131,7 +135,10 @@ public class ShipController : MonoBehaviour
         canMove = true;
         isAlive = true;
         IonCannon ionCannon = gameObject.GetComponent<IonCannon>();
-        ionCannon.SetCanShoot(true);
+        if(ionCannon != null)
+        {
+            ionCannon.SetCanShoot(true);
+        }        
         transform.position = startPosition;
         transform.rotation = startRotation;
     }
