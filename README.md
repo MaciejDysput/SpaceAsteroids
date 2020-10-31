@@ -1,5 +1,5 @@
 # SpaceAsteroids
-Projekt do nauki Unity
+Projekt do nauki Unity.
 
 
 # Authors
